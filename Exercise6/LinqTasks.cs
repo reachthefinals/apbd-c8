@@ -296,8 +296,8 @@ namespace Exercise6
                         new
                         {
                             Ename = "Brak wartości",
-                            Job = (string)null,
-                            Hiredate = (DateTime?)null
+                            Job = string.Empty,
+                            HireDate = (DateTime?)null
                         }
                     }
                 );
@@ -389,7 +389,7 @@ namespace Exercise6
                             EmpCount = eGroup.Count()
                         }
                 )
-                .Where(de => de.EmpCount == 0 || de.EmpCount >= 5)
+                .Where(de => de.EmpCount == 0 || de.EmpCount == 5)
                 .OrderBy(de => de.Dept.Dname)
                 .Select(de => de.Dept);
             //result =
